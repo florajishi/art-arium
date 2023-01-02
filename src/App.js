@@ -1,24 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
+import React, { useEffect, useState } from 'react';
+import Gallery from './Gallery';
 
 function App() {
+  const [posts, setPosts] = useState([]);
+  // const [selectedPost, setSelectedPost] = useState("")
+  // const [selectedProfile, setSelectedProfile] = useState("")
+  // const [mostPopular, setMostPopular] = useState([])
+  // const [filterByCategory, setFilterByCategory] = useState("")
+
+  useEffect(() => {
+    let url = "http://localhost:3000/posts";
+    fetch(url)
+      .then((r) => r.json())
+      .then(setPosts)
+  }, [])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Gallery posts={posts} />
   );
 }
 
