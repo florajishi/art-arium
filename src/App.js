@@ -17,7 +17,9 @@ function App() {
   }, [])
 
   return (
-    <Gallery posts={posts} />
+    <div>
+      <Gallery posts={posts} />
+    </div>
   );
 }
 
