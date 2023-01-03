@@ -1,0 +1,51 @@
+{
+  "posts": [
+    {
+      "id":1,
+      "title": "Forester Warband",
+      "artist": "leicai",
+      "image": "https://cdna.artstation.com/p/assets/images/images/057/776/188/large/cai-lei-2.jpg?1672655376",
+      "description": "Forester Warband-Yolanda",
+      "category": "Digital 2D",
+      "likes": 226
+    },
+    {
+      "id":2,
+      "title": "Order restorer--venus",
+      "artist": "leicai",
+      "image": "https://cdna.artstation.com/p/assets/images/images/052/484/832/large/cai-lei-.jpg?1659930970",
+      "description": "",
+      "category": "Digital 2D",
+      "likes": 500
+    },
+    {
+      "id":3,
+      "title": "Ghats of Pahiya",
+      "artist": "mounash",
+      "image": "https://cdna.artstation.com/p/assets/images/images/057/740/066/4k/mounash-pathak-01-b.jpg?1672518301",
+      "description": "It is Anya's first week at the temple town of Pahiya and before her apprenticeship under Lord Enki begins, she wants to absorb as much as she can of all the little wonders and quirks of this place.",
+      "category": "Digital 2D",
+      "likes": 500
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "user":"iloveart27",
+      "body": "This looks amazing!!",
+      "postId": 1
+    },
+    {
+      "id": 2,
+      "user":"realperson",
+      "body": "The linework is lovely here.",
+      "postId": 1
+    },
+    {
+      "id": 2,
+      "user":"realperson",
+      "body": "The concept is so good. Amazing brushwork!",
+      "postId": 3
+    }
+  ]
+}
