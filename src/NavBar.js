@@ -1,10 +1,17 @@
 import React from "react";
+import { NavLink } from "react-router-dom"
 
-function NavBar(){
+function NavBar({ handleLinkClick }){
+    
     return(
         <div>
-            <h1>ArtArium</h1>
-            <button>Submit An Artwork</button>
+            <NavLink
+                to="/"
+                exact
+                >
+                    ArtArium
+                </NavLink>
+            <button onClick={handleLinkClick} href="/submit-art">Submit An Artwork</button>
         </div>
     )
 }
