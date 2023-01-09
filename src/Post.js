@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Post({ post, handleLinkClick }){
     // need to add id to destructured prop
@@ -6,10 +7,10 @@ function Post({ post, handleLinkClick }){
 
     return(
         <div className="posts">
-            <a onClick={handleLinkClick} href="/view-art">
+            <Link to="/view-art">
                 <h2>{title}</h2>
                 <img src={image} alt={title}/>
-            </a>   
+            </Link>
             <h2>{artist}</h2>
             <p>Likes: {likes}</p>
             <p>{description}</p>
