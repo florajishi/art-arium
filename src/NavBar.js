@@ -8,10 +8,15 @@ function NavBar({ handleLinkClick }){
             <NavLink
                 to="/"
                 exact
+                className='logo'
                 >
                     ArtArium
-                </NavLink>
-            <button onClick={handleLinkClick} href="/submit-art">Submit An Artwork</button>
+            </NavLink>
+            <NavLink
+                to="/submit-art"
+            >
+                Submit An Artwork
+            </NavLink>
         </div>
     )
 }
