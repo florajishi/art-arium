@@ -1,15 +1,42 @@
 import React, { useEffect, useState } from "react";
-import Latest from "./Latest";
-import MostPopular from "./MostPopular";
-import Post from "./Post";
-
+import { NavLink } from "react-router-dom";
+import DisplayedPosts from "./DisplayedPosts";
 
 function Gallery({ handleLinkClick }){
+    const [posts, setPosts] = useState([]);
+    const [comments, setComments] = useState([])
 
+    useEffect(() => {
+        fetch("db.json", {
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+            }
+        })
+          .then((r) => r.json())
+          .then((data) => compileData(data.posts, data.comments)
+          )
+      }, [])
+    
+    function compileData(posts, comments){
+        setPosts(posts)
+        setComments(comments)
+    }
     return (
         <div>
-            <a onClick={handleLinkClick} href="/latest"><h2>Latest Artwork</h2></a>
-            <a onClick={handleLinkClick} href="/most-popular"><h2>Most Popular</h2></a>
+            <NavLink
+                to="/latest"
+                /*style={({ isActive })} => isActive ? activeStyle : undefined*/    
+            >
+                Latest Artwork
+            </NavLink>
+            <NavLink
+                to="/most-popular"
+                /*style={({ isActive })} => isActive ? activeStyle : undefined*/
+            >
+                Most Popular
+            </NavLink>
+            <DisplayedPosts posts={posts} />
         </div>
     );
 }
